@@ -1,0 +1,11 @@
+{
+    "collectCoverage": true,
+    "collectCoverageFrom": ["./src/**"],
+    "coverageThreshold": {
+        "./src/": {
+            "lines": 80,
+            "branches": 80,
+            "functions": 80
+        }
+    }
+}
