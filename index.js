@@ -29,11 +29,11 @@ mongoose.connect(
         useUnifiedTopology: true
     }
 )
-const db = mongoose.connection
-db.on('error', console.error.bind(console, 'connection error: '))
-db.once('open', function () {
-    //console.log('Connected successfully')
-})
+// const db = mongoose.connection
+// db.on('error', console.error.bind(console, 'connection error: '))
+// db.once('open', function () {
+//     //console.log('Connected successfully')
+// })
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
