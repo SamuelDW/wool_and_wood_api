@@ -6,7 +6,3 @@ exports.productList = (req ,res) => {
 exports.createProduct = (req, res) => {
     res.status(200).send({message: 'What ho!'})
 }
-
-exports.deleteProduct = (req, res) => {
-    res.status(200).send()
-}
