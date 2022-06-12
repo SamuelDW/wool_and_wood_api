@@ -1,8 +1,8 @@
+/* eslint-disable no-undef */
 const express = require('express')
 const helmet = require('helmet')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-const mongoose = require('mongoose')
 const morgan = require('morgan')
 require('dotenv').config()
 
@@ -18,7 +18,7 @@ app.disable('x-powered-by')
 app.use(helmet())
 app.use(cors())
 
-app.use(morgan("dev"))
+app.use(morgan('dev'))
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
