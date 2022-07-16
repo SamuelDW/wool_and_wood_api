@@ -1,4 +1,4 @@
-const app = require('./index')
+import app from './index.js'
 
 app.listen(3000, () => {
     console.log(`Server Listening on ${3000}`)

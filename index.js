@@ -1,10 +1,10 @@
-/* eslint-disable no-undef */
-const express = require('express')
-const helmet = require('helmet')
-const bodyParser = require('body-parser')
-const cors = require('cors')
-const morgan = require('morgan')
-require('dotenv').config()
+import express  from 'express'
+import bodyParser from 'body-parser'
+import cors from 'cors'
+import helmet from 'helmet'
+import dotenv from 'dotenv'
+import morgan from 'morgan'
+dotenv.config()
 
 /**
  * Creating the application
@@ -27,13 +27,13 @@ app.use(bodyParser.urlencoded({extended: true}))
  * Routing for the API
  * Main routes will be Products, Orders, Order Items Users and Payments
  */
-const productsRouter = require('./src/routes/products')
+import productRouter from './src/products/productRouter.js'
 
-app.use('/products', productsRouter)
+app.use('/products', productRouter)
 
 app.get('/', (req, res) => {
     res.status(200).send({message: 'hello'})
 })
 
 
-module.exports = app
+export default app

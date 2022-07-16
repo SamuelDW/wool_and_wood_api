@@ -1,10 +1,11 @@
 {
   "name": "wool_and_wood_api",
   "version": "1.0.0",
-  "description": "",
+  "description": "API to power the Wool & Wood online store",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "jest --config=jest.config.json --coverage",
+    "test": "mocha './test/**/*.test.js'",
     "start": "nodemon ./server.js",
     "lint": "npx eslint src --fix"
   },
@@ -17,12 +18,11 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "helmet": "^5.1.0",
-    "mongoose": "^6.3.6",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
     "eslint": "^8.17.0",
-    "jest": "^28.1.0",
+    "mocha": "^10.0.0",
     "nodemon": "^2.0.16",
     "supertest": "^6.2.3"
   }
