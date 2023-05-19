@@ -31,9 +31,15 @@ import productRouter from './src/products/productRouter.js'
 
 app.use('/products', productRouter)
 
-app.get('/', (req, res) => {
-    res.status(200).send({message: 'hello'})
-})
 
+
+// import connection from './src/config/database.js'
+
+// app.get('/', (req, res) => {
+//     connection.query('SELECT * from products', (err, rows) => {
+//         if (err) throw err
+//         res.status(200).send({data: rows})
+//     })
+// })
 
 export default app
